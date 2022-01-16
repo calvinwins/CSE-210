@@ -4,7 +4,7 @@
 def main():
     board = new_board()
     player = next_player("")
-    while not (winner(board) or is_a_draw(board)):
+    while not (winner(board) or draw(board)):
         display_board(board)
         make_move(player, board)
         player = next_player(player)
@@ -18,7 +18,7 @@ def new_board():
         board.append(square + 1)
     return board
 
-def is_a_draw(board):
+def draw(board):
     for square in range(9):
         if board[square] != "x" and board[square] != "o":
             return False
