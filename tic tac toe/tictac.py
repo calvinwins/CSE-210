@@ -55,3 +55,4 @@ def next_player(current):
 
 if __name__ == "__main__":
     main()
+
